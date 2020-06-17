@@ -17,62 +17,7 @@ shinyServer(function(input, output, session) {
   
   ##### load necessary data ------------------------------------------------------------------------------------------------------
   
-  # RNA <- list(
-  #   MA4 = read_tsv("RNA-seq_data/contrast_SIMM_vs_SIMA6_cpm.tsv") %>%
-  #     mutate(Experiment = "MLL-AF4 siRNA") %>%
-  #     select(Experiment, Geneid, logFC, FDR, 
-  #            Control_1 = SIMM_1, Control_2 = SIMM_2, Control_3 = SIMM_3, 
-  #            Treatment_1 = SIMA6_1, Treatment_2 = SIMA6_2, Treatment_3 = SIMA6_3),
-  #   RUNX1 = read_tsv("RNA-seq_data/contrast_NT_NT_vs_RUNX1KD_NT_cpm.tsv") %>%
-  #     mutate(Experiment = "RUNX1 siRNA") %>%
-  #     select(Experiment, Geneid, logFC, FDR, 
-  #            Control_1 = NT_NT_1, Control_2 = NT_NT_2, Control_3 = NT_NT_3, 
-  #            Treatment_1 = RUNX1KD_NT_1, Treatment_2 = RUNX1KD_NT_2, Treatment_3 = RUNX1KD_NT_3),
-  #   iBET = read_tsv("RNA-seq_data/contrast_DMSO_vs_IBET-1HR_cpm.tsv") %>%
-  #     mutate(Experiment = "iBET treatment") %>%
-  #     select(Experiment, Geneid, logFC, FDR, 
-  #            Control_1 = DMSO.1HR_1, Control_2 = DMSO.1HR_2, Control_3 = DMSO.1HR_3, 
-  #            Treatment_1 = IBET.1HR_1, Treatment_2 = IBET.1HR_2, Treatment_3 = IBET.1HR_3),
-  #   EPZ = read_tsv("RNA-seq_data/contrast_0umEPZ_vs_2umEPZ_cpm.tsv") %>%
-  #     mutate(Experiment = "EPZ treatment") %>%
-  #     select(Experiment, Geneid, logFC, FDR, 
-  #            Control_1 = X0um.EPZ_1, Control_2 = X0um.EPZ_2, Control_3 = X0um.EPZ_3, 
-  #            Treatment_1 = X2um.EPZ_1, Treatment_2 = X2um.EPZ_2, Treatment_3 = X2um.EPZ_3)
-  # )
-   
-  # RNA <- do.call(rbind, RNA) %>%
-  #   reshape2::melt(1:4, variable.name = "Samples", value.name = "CPM") %>% 
-  #   mutate(Condition = substr(Samples, 1, nchar(as.character(Samples)) - 2)) 
-  # 
-  # GRN <- list(
-  #   edges = read.table("GRN_data/AggregatedGraph_MLL-AF4_edges.tsv", header = T, sep="\t") %>% select(-from, -to),
-  #   nodes = read.table("GRN_data/AggregatedGraph_MLL-AF4_nodes.tsv", header = T, sep="\t") %>% select(-name)
-  # )
-  # DR <- list(
-  #   samples = list(
-  #     all = read.table("UMAP_data/UMAP_1_binary_all.tsv", header = T, sep="\t"),
-  #     ALL = read.table("UMAP_data/UMAP_1_binary_men.tsv", header = T, sep="\t"),
-  #     AML = read.table("UMAP_data/UMAP_1_binary_laml.tsv", header = T, sep="\t"),
-  #     FBM = read.table("UMAP_data/UMAP_1_binary_fbm.tsv", header = T, sep="\t")
-  #   ),
-  #   nodes = list(
-  #     
-  #     all = read.table("UMAP_data/UMAP_2_binary_all.tsv", header = T, sep="\t"),
-  #     ALL = read.table("UMAP_data/UMAP_2_binary_men.tsv", header = T, sep="\t"),
-  #     AML = read.table("UMAP_data/UMAP_2_binary_laml.tsv", header = T, sep="\t"),
-  #     FBM = read.table("UMAP_data/UMAP_2_binary_fbm.tsv", header = T, sep="\t")
-  #   )
-  # )
-   
-  # binary.matrix <- data.frame(read.table("UMAP_data//Patient_Binary_Matrix.tsv", header = T, sep="\t"))
-  
- # load("bin_mat.RData")
-  #load("UMAP.RData")
- # load("RNA.RData")
- # load("GRN.RData")
-  
    urltemp <- fs_download(12497765)
-   
    
     withProgress(
       message = 'Please wait',
