@@ -7,7 +7,7 @@ output: html_document
 ### Manuscript and contact information
 Phenotypic analysis of an MLL-AF4 gene regulatory network reveals indirect CASP9 repression as a mode of inducing apoptosis resistance.
 
-Jor R. Harman<sup>1,†</sup>, Ross Thorne<sup>1,†</sup>, Max Jamilly<sup>2</sup>, Marta Tapia<sup>1,3</sup>, Nicholas T. Crump<sup>1</sup>, Siobhan Rice<sup>1,4</sup>, Ryan Beveridge<sup>1,5</sup>, Marella F.T.R de Bruijn<sup>1</sup>, Irene Roberts<sup>1,4</sup>, Anindita Roy<sup>1,4</sup>, Tudor A. Fulga<sup>2</sup> and Thomas A. Milne<sup>1,*</sup>.
+Joe R. Harman<sup>1,†</sup>, Ross Thorne<sup>1,†</sup>, Max Jamilly<sup>2</sup>, Marta Tapia<sup>1,3</sup>, Nicholas T. Crump<sup>1</sup>, Siobhan Rice<sup>1,4</sup>, Ryan Beveridge<sup>1,5</sup>, Marella F.T.R de Bruijn<sup>1</sup>, Irene Roberts<sup>1,4</sup>, Anindita Roy<sup>1,4</sup>, Tudor A. Fulga<sup>2</sup> and Thomas A. Milne<sup>1,*</sup>.
 
  \* Corresponding author: 
  Thomas A. Milne (thomas.milne@imm.ox.ac.uk)
